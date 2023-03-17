@@ -10,7 +10,7 @@ export default function Dropdown({ options, onClick }) {
         onClick && onClick(value)
         setShowOption(false)
     }
-    return <div className="border rounded-full py-2 px-4 flex items-center justify-between bg-white w-max cursor-pointer" onClick={() => setShowOption(!showOption)}>
+    return <div className="border rounded-full py-2 px-4 flex items-center justify-between bg-white w-max cursor-pointer shadow-md" onClick={() => setShowOption(!showOption)}>
         <img src={selectedOption?.icon} width={25} height={25} alt="asds" />
         <p className="ml-3 font-semibold">{selectedOption?.label}</p>
         {

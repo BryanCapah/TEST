@@ -23,7 +23,6 @@ export default function Container({ children }) {
                             <img src={logo} alt="" />
                             <Dropdown onClick={value => common.setLanguage(value)} options={_static.langOptions} />
                         </div>
-                        <br />
                         {children}
                     </div>
                 </div>
