@@ -16,3 +16,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.dc {
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #e5e7e9;
+  border-radius: 100%;
+}
+.slick-dots .slick-active {
+  width:1.7rem;
+}
+
+.slick-dots .slick-active .dc {
+  background-color: #3AC4A0;
+  width: 1.7rem;
+  border-radius: 500px;
+}
+
+.slick-arrow{
+  display: none !important;
+}
+
+.fade-in { 
+  animation: fadeIn 1s; 
+  animation-delay: 0.2s; 
+  animation-fill-mode: forwards; 
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
