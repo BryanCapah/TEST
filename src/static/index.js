@@ -4,27 +4,31 @@ import welcome3 from '../assets/slide3.png'
 import welcome4 from '../assets/slide4.png'
 import id from '../assets/id.png'
 import en from '../assets/en.png'
+import common from '../common'
+import dictionary from './dictionary'
+
+const language = common.getLanguage()
 
 const registerSlideAssets = [
     {
         image: welcome,
-        title: 'Selamat Datang di Seeds',
-        text: 'Mulai dan perluas perjalanan investasi kamu dan teman-temanmu!',
+        title: dictionary.register.slide.title[1][language],
+        text: dictionary.register.slide.text[1][language],
     },
     {
         image: welcome2,
-        title: 'Buat Circle kamu sendiri',
-        text: 'Buatlah circle dengan orang-orang yang memiliki minat dan passion yang sama',
+        title: dictionary.register.slide.title[2][language],
+        text: dictionary.register.slide.text[2][language],
     },
     {
         image: welcome3,
-        title: 'Analisis Portfolio dengan mudah',
-        text: 'Memudahkan kamu mendapatkan wawasan untuk meningkatkan investasimu',
+        title: dictionary.register.slide.title[3][language],
+        text: dictionary.register.slide.text[3][language],
     },
     {
         image: welcome4,
-        title: 'Raih tujuan kamu!',
-        text: 'Dapatkan lebih dekat dengan impianmu dengan mendapatkan lebih banyak hadiah',
+        title: dictionary.register.slide.title[4][language],
+        text: dictionary.register.slide.text[4][language],
     },
 ]
 
@@ -39,8 +43,8 @@ const slideSettings = {
 };
 
 const langOptions = [
-    { value: "EN", label: "EN", icon: en },
-    { value: "ID", label: "ID", icon: id }
+    { id: "en", label: "EN", icon: en },
+    { id: "id", label: "ID", icon: id }
 ];
 
 const _static = {

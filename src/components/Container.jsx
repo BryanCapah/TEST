@@ -5,6 +5,7 @@ import { Dropdown } from '../components'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import _static from '../static'
+import common from '../common';
 
 export default function Container({ children }) {
     return <div className='opacity-0 flex min-w-full min-h-screen fade-in'>
@@ -17,10 +18,10 @@ export default function Container({ children }) {
         <div className='min-w-[50vw] h-screen relative'>
             <div className='absolute h-full w-full z-20'>
                 <div className='w-full flex items-center justify-center lg:px-20 lg:py-14 h-full p-8 '>
-                    <div className='bg-white bg-opacity-50 min-w-full min-h-full py-12 px-16 relative rounded-2xl shadow-center text-sm lg:text-base flex flex-col justify-between'>
-                        <div className='w-full flex justify-between items-center pr-5 lg:pr-0'>
+                    <div className='bg-white bg-opacity-50 min-w-full min-h-full py-12 px-8 lg:px-16 relative rounded-2xl shadow-center text-sm lg:text-base flex flex-col justify-between'>
+                        <div className='w-full flex justify-between items-center lg:pr-0'>
                             <img src={logo} alt="" />
-                            <Dropdown options={_static.langOptions} />
+                            <Dropdown onClick={value => common.setLanguage(value)} options={_static.langOptions} />
                         </div>
                         <br />
                         {children}
